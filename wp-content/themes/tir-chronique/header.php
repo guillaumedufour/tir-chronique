@@ -8,12 +8,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<body <?php body_class(); ?>>
-<header class="header">
+
+<header class="site__header">
     <a href="<?php echo home_url( '/' ); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
-
     </a>
+	<?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
+	<?php get_search_form(); ?>
 </header>
 
 <?php wp_body_open(); ?>
